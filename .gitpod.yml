@@ -1,17 +1,4 @@
 
 image:
   file: .gitpod.Dockerfile
-  
-tasks:
-command: python main.py
-
-ports:
-- port: 8888
-onOpen: open-preview
-
-github:
-prebuilds:
-master: true
-cache:
-paths:
-- .pycaffe
+ 
