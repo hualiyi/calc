@@ -1,4 +1,58 @@
+image: ubuntu
 
-image:
-  file: .gitpod.Dockerfile
+# 设置依赖关系
+
+# 具体内容可以修改为你需要的依赖项
+
+before:
+
+  - apt-get update && apt-get install -y \
+
+      git \
+
+      autoconf \
+
+      build-essential \
+
+      cmake \
+
+      libboost-all-dev \
+
+      libopencv-dev \
+
+      libgflags-dev \
+
+      libopenblas-dev \
+
+      libprotobuf-dev \
+
+      libleveldb-dev \
+
+      libsnappy-dev \
+
+      libhdf5-serial-dev \
+
+      protobuf-compiler \
+
+      liblmdb-dev \
+
+      libgoogle-glog-dev \
+
+      libeigen3-dev \
+
+      libboost-python-dev
+
+# 指定运行命令
+
+tasks:
+
+  - command: ./ci/build.sh
+
+# 设置环境变量
+
+environment:
+
+  GH_REPO_NAME: calc_test
+
+  GH_REPO_REF: https://github.com/nmerrill67/calc_test.git
  
